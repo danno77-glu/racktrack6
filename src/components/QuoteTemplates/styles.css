@@ -1,0 +1,67 @@
+.quote-templates {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.template-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.template-selector select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+}
+
+.quote-preview {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  min-height: 300px;
+  overflow-y: auto;
+}
+
+.preview-content {
+  padding: 1rem;
+}
+
+.preview-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.preview-actions button {
+  width: 100%;
+  padding: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .template-selector {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .template-selector select {
+    width: auto;
+    min-width: 200px;
+  }
+
+  .quote-preview {
+    min-height: 400px;
+  }
+
+  .preview-content {
+    padding: 2rem;
+  }
+
+  .preview-actions {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
